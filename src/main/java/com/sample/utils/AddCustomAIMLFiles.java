@@ -3,7 +3,7 @@ package com.sample.utils;
 import org.alicebot.ab.Bot;
 import org.alicebot.ab.MagicBooleans;
 
-public class CustomAiml {
+public class AddCustomAIMLFiles {
 
 	private static final boolean TRACE_MODE = false;
 	static String botName = "super";

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-<!-- File: update.aiml -->
+<!-- File: a-custom-rest-caller.aiml -->
 <!-- Author: Dr. Richard S. Wallace -->
 <!-- Last modified: May 17, 2020 -->
 <!--  -->
@@ -15,13 +15,7 @@
 <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
 <!--  -->
 <!-- For more information see http://www.alicebot.org -->
-<category><pattern>VERSION</pattern>
-<template>S.U.P.E.R. AIML Bot version 0.0.4</template>
-</category>
-<category><pattern>BUILD</pattern>
-<template>Sun May 17 12:41:35 IST 2020</template>
-</category>
-<category><pattern>DELEVLOPMENT ENVIRONMENT</pattern>
-<template>Program AB 0.0.4.2 beta -- AI Foundation Reference AIML 2.0 implementation</template>
+<category><pattern>WHAT IS THE USERNAME OF THE USER WITH ID *</pattern>
+<template>USERNAME## The UserName <star/> is ##<star/> </template>
 </category>
 </aiml>

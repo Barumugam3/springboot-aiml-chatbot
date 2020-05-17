@@ -21,7 +21,7 @@ public class BotRequestController {
 	public JSONObject getBotResponse(@PathVariable String message) {
 		JSONObject responseObject = new JSONObject();
 		try {
-			responseObject.put("response", chatbot.getBotResponse(message));
+			responseObject.put("response", chatbot.getBotResponseforRest(message));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

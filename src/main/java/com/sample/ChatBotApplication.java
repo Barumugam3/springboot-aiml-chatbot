@@ -20,6 +20,6 @@ public class ChatBotApplication implements CommandLineRunner {
 	}
 
 	public void run(String... args) throws Exception {
-		//chatbot.getBotResponse("hi");
+		chatbot.getBotResponseforConsole();
 	}
 }
