@@ -1,0 +1,30 @@
+<button mat-fab color="primary" class="fixedbutton" mat-button 
+	[matMenuTriggerFor]="aboveMenu"  (click)="resetChat()" matTooltip="Chat Bot"><mat-icon>forum</mat-icon></button>
+<mat-menu (click) = "$event.stopPropagation()" #aboveMenu="matMenu" yPosition="above">
+  <div class="banner">
+	<mat-toolbar style="min-height:30px" (click) = "$event.stopPropagation()">
+	<mat-icon>perm_identity</mat-icon>
+	NextGen Chat Bot</mat-toolbar>
+  </div>
+  <div fxLayoutAlign="start start" class="chatWindow">
+	<mat-card class="chat-card" (click) = "$event.stopPropagation()">
+	<table class="chat-table">
+	   <tr *ngFor="let chat of chatsession">
+			<ng-template [ngIf]="chat.source == 'receive'">
+				<td class="with-icon-left"><mat-icon>perm_identity</mat-icon>&nbsp;&nbsp;{{chat.message}}</td>
+			</ng-template>
+			<ng-template [ngIf]="chat.source == 'send'">
+				<td class="with-icon-right">{{chat.message}}&nbsp;&nbsp;<mat-icon>face</mat-icon></td>
+			</ng-template>
+	   </tr>
+   </table>
+	</mat-card>
+  </div>
+  <div class="sendData">
+   <mat-form-field appearance="legacy" style="width:320px !important"  (click) = "$event.stopPropagation()">
+    <mat-label>Ask Me Something !!</mat-label>
+     <input matInput [(ngModel)]="inputfield" (keyup.enter)="sendRequest(query.value)" #query type="text" name="inputfield">
+		<mat-icon matSuffix  type="submit" (click)="sendRequest(query.value)">send</mat-icon>
+	</mat-form-field>
+</div>
+</mat-menu>
